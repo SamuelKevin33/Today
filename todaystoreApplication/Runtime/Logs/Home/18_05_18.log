@@ -1,0 +1,10 @@
+[ 2018-05-18T09:07:31+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0006s ]
+

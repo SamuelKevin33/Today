@@ -1,0 +1,50 @@
+[ 2018-05-06T09:26:18+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=index&a=initlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0008s ]
+
+[ 2018-05-06T17:35:38+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=index&a=initlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001313s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0012s ]
+
+[ 2018-05-06T19:06:59+08:00 ] ::1 /today/todaystore/index.php/Home/Index/home_fruit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005385s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005515s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001766s ]
+
+[ 2018-05-06T19:06:59+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=index&a=initlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0012s ]
+

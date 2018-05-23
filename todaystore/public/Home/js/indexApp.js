@@ -89,7 +89,7 @@ methods: {
     formData.append('num', this.car_num);
     formData.append('fruitid', e);
     formData.append('phone', sessionStorage.getItem("user_phone"));
-    this.$http.post('/today/todaystore/index.php?m=Home&c=index&a=upcar', formData).then(response => {
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=upcar', formData).then(response => {
       if(response.info2="fine"){
         alert('添加成功');
         this.start_model(0);
@@ -186,7 +186,7 @@ methods: {
      },
      list: function(){
       var that=this;
-      this.$http.get('/today/todaystore/index.php?m=Home&c=index&a=initlist').then(response => {
+      this.$http.get('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=initlist').then(response => {
             // that.fruit=response.data;
             var j=0;
             var k=0;
@@ -257,7 +257,7 @@ methods: {
      var formData = new FormData();
      formData.append('phone',that.client1.phone);
      formData.append('password',that.client1.password);
-     this.$http.post('/today/todaystore/index.php?m=Home&c=index&a=logit', formData).then(response => {
+     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=logit', formData).then(response => {
       alert('登录成功啦！');
       sessionStorage.setItem('user_name', response.data.name);
       sessionStorage.setItem('user_phone', response.data.info);
@@ -287,7 +287,7 @@ methods: {
      formData.append('name', that.client.name);
      formData.append('phone',that.client.phone);
      formData.append('password',that.client.password);
-     this.$http.post('/today/todaystore/index.php?m=Home&c=index&a=signit', formData).then(response => {
+     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=signit', formData).then(response => {
       alert('登录成功啦！');
       sessionStorage.setItem('user_name', response.data.name);
       sessionStorage.setItem('user_phone', response.data.info);

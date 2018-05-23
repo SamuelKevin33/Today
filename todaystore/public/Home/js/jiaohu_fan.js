@@ -31,7 +31,7 @@ return that.listarray;
     
 fanlist: function(){
   var that=this;
-  this.$http.get('/today/todaystore/index.php?m=Home&c=back&a=fankui').then(response => {
+  this.$http.get('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=fankui').then(response => {
             // that.fruit=response.data;
             that.listarray= response.data;
             // console.log(that.fruitlists);
@@ -43,7 +43,7 @@ fanlist: function(){
 finish_fankui: function(fankuiid){
   var formstatu1 =new FormData();
     formstatu1.append('listid', fankuiid);
-  this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=fankui_finish',formstatu1).then(response => {
+  this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=fankui_finish',formstatu1).then(response => {
         
           }, response => {
     // error callback
@@ -63,7 +63,7 @@ upliststatu: function(listid){
   var formstatu =new FormData();
     formstatu.append('listid', listid);
     formstatu.append('liststatus', this.whichstatu);
-    this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=updateliststatu',formstatu).then(response => {
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=updateliststatu',formstatu).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
             console.log(response.data);

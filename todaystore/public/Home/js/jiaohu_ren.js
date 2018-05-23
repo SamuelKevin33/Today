@@ -38,7 +38,7 @@ return that.listarray;
     formclient.append('clientpassword', this.clientpassword);
     formclient.append('clientphone', this.clientphone);
     formclient.append('clientplace', this.clientplace);
-     this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=newclient',formclient).then(response => {
+     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=newclient',formclient).then(response => {
             console.log(response.data);
             // location.reload();
           }, response => {
@@ -54,7 +54,7 @@ del_client: function(resid){
  if (confirm(msg)==true){ 
   var formclient =new FormData();
     formclient.append('id', resid);
-     this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=delclient',formclient).then(response => {
+     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=delclient',formclient).then(response => {
             console.log(response.data);
             location.reload();
           }, response => {
@@ -76,7 +76,7 @@ del_client: function(resid){
     formclient.append('phone', phone);
     formclient.append('place', place);
     console.log(formclient)
-    this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=updateclient',formclient).then(response => {
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=updateclient',formclient).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
             console.log(response.data);
@@ -86,7 +86,7 @@ del_client: function(resid){
     },
 list: function(){
   var that=this;
-  this.$http.get('/today/todaystore/index.php?m=Home&c=back&a=client_list').then(response => {
+  this.$http.get('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=client_list').then(response => {
             // that.fruit=response.data;
             that.listarray= response.data;
             // console.log(that.fruitlists);
@@ -109,7 +109,7 @@ upliststatu: function(listid){
   var formstatu =new FormData();
     formstatu.append('listid', listid);
     formstatu.append('liststatus', this.whichstatu);
-    this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=updateliststatu',formstatu).then(response => {
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=updateliststatu',formstatu).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
             console.log(response.data);

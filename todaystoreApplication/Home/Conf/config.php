@@ -1,9 +1,9 @@
 <?php
 return array(
 	'TMPL_PARSE_STRING'=>array(
-        '__JS__'=>'/today/todaystore/public/Home/js',
-        '__CSS__'=>'/today/todaystore/public/Home/css',
-        '__IMAGE__'=>'/today/todaystore/public/Home/images',
+        '__JS__'=>'http://47.106.111.76/todaystore/public/Home/js',
+        '__CSS__'=>'http://47.106.111.76/todaystore/public/Home/css',
+        '__IMAGE__'=>'http://47.106.111.76/todaystore/public/Home/images',
     )
     
 );

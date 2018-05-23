@@ -8,6 +8,7 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
 SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0073s ]
 SQL: SELECT * FROM `fruit`  [ RunTime:0.0007s ]
 
+<<<<<<< HEAD
 [ 2018-05-23T12:42:07+08:00 ] 58.40.126.220 /todaystore/index.php/Home/Index/tdindex.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
@@ -68,3 +69,21 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000266s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000286s ]
 
+=======
+[ 2018-05-23T15:10:32+08:00 ] ::1 /today/todaystore/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+
+[ 2018-05-23T15:10:57+08:00 ] ::1 /today/todaystore/index.php?m=home&c=index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+
+>>>>>>> 77b07cbe2e387162584e4cfef6301ec1fe577765

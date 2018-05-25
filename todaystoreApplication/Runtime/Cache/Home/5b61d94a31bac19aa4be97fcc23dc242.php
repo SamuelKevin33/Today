@@ -3,11 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>今天水果商店</title>
-  <link href="/today/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/tdjs.js"></script>
-   <script type="text/javascript" src="/today/todaystore/public/Home/js/vue.min.js"></script>
-  <script type="text/javascript" src='/today/todaystore/public/Home/js/vue-resource.min.js'></script>
+  <link href="http://47.106.111.76/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/tdjs.js"></script>
+   <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/vue.min.js"></script>
+  <script type="text/javascript" src='http://47.106.111.76/todaystore/public/Home/js/vue-resource.min.js'></script>
 </head>
 <body>
     <div id="app_index">
@@ -15,7 +15,7 @@
     <nav class="td_nav">
       <div class="td_navleft">
         <a href="tdindex.html">
-          <img src="/today/todaystore/public/Home/images/tdlogo.png" />
+          <img src="http://47.106.111.76/todaystore/public/Home/images/tdlogo.png" />
         </a>
       </div>
       <div class="td_navmiddle">
@@ -139,7 +139,7 @@
                   <input :id="'fruit'+key" v-on:change="forsum" type="checkbox" class="selecthing goods-check GoodsCheck" data-id="5208">
                   <label :for="'fruit'+key"></label>        </td>
                   <td class="eve_img" >
-                    <img :src="'/today/todaystore/public/Home/images/'+value.fruitname+'.jpg'" title="显示85号苹果5斤的详细信息" class="center_car_img">
+                    <img :src="'http://47.106.111.76/todaystore/public/Home/images/'+value.fruitname+'.jpg'" title="显示85号苹果5斤的详细信息" class="center_car_img">
                     <div class="detial">
                       <span class="things"><a href="/59" title="查看详情">{{value.fruitname}}</a></span>
                     </div>
@@ -276,6 +276,6 @@
   </div><!-- /.modal -->
 </div>
 </div>
-   <script type="text/javascript" src="/today/todaystore/public/Home/js/index_center.js"></script>
+   <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/index_center.js"></script>
 </body>
 </html>

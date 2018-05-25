@@ -52,7 +52,7 @@ return this.fruitlists;
       formimg.append('left', that.gleft);
 // console.log(vm.image)
 var config={headers:{'Content-Type':'multipart/form-data'}};
-this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=imgssave',formimg,config).then(function(response){
+this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=imgssave',formimg,config).then(function(response){
       // console.log(response.data);
       // console.log(response);
     })
@@ -60,7 +60,7 @@ this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=imgssave',formimg,c
 },
 fruitlist: function(){
   var that=this;
-  this.$http.get('/today/todaystore/index.php?m=Home&c=back&a=fruitlist').then(response => {
+  this.$http.get('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=fruitlist').then(response => {
             // that.fruit=response.data;
             that.fruitlists= response.data;
             // console.log(that.fruitlists);
@@ -81,7 +81,7 @@ sub_fruitleft: function(res,resname){
     var formleft =new FormData();
     formleft.append('name', resname);
     formleft.append('fruitleft', thisleft)
-    this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=updateleft',formleft).then(response => {
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=updateleft',formleft).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
             console.log(response.data);
@@ -100,7 +100,7 @@ upthisfruit: function(resid,res){
   formupfruit.append('fruitweight',$("#fru"+res+"").children().eq(2).children().val());
   formupfruit.append('fruitprice',$("#fru"+res+"").children().eq(3).children().val());
   formupfruit.append('fruitstatu',$("#fru"+res+"").children().eq(4).children().val());
-  this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=upfruit',formupfruit).then(response => {
+  this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=upfruit',formupfruit).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
             console.log(response.data);
@@ -111,7 +111,7 @@ upthisfruit: function(resid,res){
 delthisfruit: function(res){
   var formdel =new FormData();
     formdel.append('id', res);
-this.$http.post('/today/todaystore/index.php?m=Home&c=back&a=delfruit',formdel).then(response => {
+this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=delfruit',formdel).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
             console.log(response.data);

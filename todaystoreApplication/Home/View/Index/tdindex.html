@@ -168,8 +168,8 @@
           <td><img class="width350" v-bind:src="'__IMAGE__/'+item.fruitname+'.jpg'"/></td>
           <td class="paddingL45">
             <h2 class="content3">{{item.fruitname}}</h2>
-            <h5 class="content2">{{item.fruitweight}}g</h6>
-            <h4 class="content1">￥{{item.fruitprice}}</h6>
+            <h6 class="content2">{{item.fruitweight}}g</h6>
+            <h4 class="content1">￥{{item.fruitprice}}</h4>
             <h6 class="content2">剩{{item.fruitleft}}件</h6>
             <input class="cut change_carnum" value="-" type="button" v-on:click="car_num--">
             <input class="amount" type="text" value="1" v-model="car_num">
@@ -183,9 +183,7 @@
           </td>
         </tr>
       </table>
-
     </div>
-    <!--  <modal-fruit v-bind:onefruit="onefruit1"></modal-fruit> -->
   </div>
 </div>
 </div>

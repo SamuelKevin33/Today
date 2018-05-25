@@ -4,11 +4,11 @@
     <meta http-equiv="Content-Type" content="multipart/form-data;charset=utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>今天水果商店</title>
-  <link href="/today/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/tdjs.js"></script>
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/vue.min.js"></script>
-  <script type="text/javascript" src='/today/todaystore/public/Home/js/vue-resource.min.js'></script>
+  <link href="http://47.106.111.76/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/tdjs.js"></script>
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/vue.min.js"></script>
+  <script type="text/javascript" src='http://47.106.111.76/todaystore/public/Home/js/vue-resource.min.js'></script>
 
  
 </head>
@@ -18,7 +18,7 @@
     <nav class="td_nav">
       <div class="td_navleft">
         <a href="tdindex.html">
-        <img src="/today/todaystore/public/Home/images/tdlogo.png" />
+        <img src="http://47.106.111.76/todaystore/public/Home/images/tdlogo.png" />
       </a>
       </div>
       <div class="td_navmiddle">
@@ -37,9 +37,9 @@
   <div class="sign_left">
     <ul class="sign_left_ul">
       <a >
-      <li class="sign_left_list"><img src="/today/todaystore/public/Home/images/sign1.jpg"/></li>
-      <li class="sign_left_list"><img src="/today/todaystore/public/Home/images/sign2.jpg"/></li>
-      <li class="sign_left_list"><img src="/today/todaystore/public/Home/images/sign3.jpg"/></li>
+      <li class="sign_left_list"><img src="http://47.106.111.76/todaystore/public/Home/images/sign1.jpg"/></li>
+      <li class="sign_left_list"><img src="http://47.106.111.76/todaystore/public/Home/images/sign2.jpg"/></li>
+      <li class="sign_left_list"><img src="http://47.106.111.76/todaystore/public/Home/images/sign3.jpg"/></li>
       <
     </a>
     </ul>
@@ -74,6 +74,6 @@
     </div><!-- /.modal -->
   </div>
   </div>
-    <script type="text/javascript" src="/today/todaystore/public/Home/js/indexApp.js"></script>
+    <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/indexApp.js"></script>
 </body>
 </html>

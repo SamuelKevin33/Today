@@ -611,7 +611,7 @@ float: left;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    width: 329px;
+    width: 247px;
     border-bottom: 1px dashed #ccc;
         border-radius: 60px;
         cursor: pointer;
@@ -649,6 +649,17 @@ float: left;
     background: #f6aa00;
     color: #fff;
     margin: 0 !important;
+    outline: none;
+}
+.submit_add{
+	    width: 50px;
+    border-radius: 3px;
+    border: none;
+    height: 20px;
+    background: #795548;
+    color: #fff;
+    margin: 0 !important;
+    outline: none;
 }
 .center_information_password{
 	display: none;
@@ -894,6 +905,22 @@ a{
     border-radius: 4px;
     height: 25px;
 }
+body{
+	margin: 0;
+	color:#333;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
 .content2{
 	    color: #555;
 }
@@ -909,4 +936,95 @@ a{
 }
 .paddingL45{
 	padding-left: 35px;
+}
+.showaddress{
+	    line-height: 30px;
+    font-size: 16px;
+    color: #795548;
+}
+.center_money{
+	margin-left: 50px;
+    margin-top: 50px;
+    color: #444;
+    font-size: 14px;
+    display: none;
+}
+.chongzhika{
+	margin-top: 30px;
+    border-top: 0.5px solid #eee;
+    padding-top: 30px;
+    width: 690px;
+    color: #777;
+    font-size: 12px;
+    height: 120px;
+}
+.chongzhishu{
+	    float: left;
+    width: 150px;
+    text-align: center;
+    line-height: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-top: 38px;
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
+    background: #65a031;
+}
+.chongzhititle{
+	color: #65a031;
+	font-weight: bold;
+}
+.width200{
+	height: 333px;
+}
+.alipay{
+	    float: left;
+	      display: block;
+	text-align: center;
+	width:180px;
+	height: 333px;
+	background-color:#019fe8;
+	 transition:width 0.8s ease;
+	  writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+        font-size: 34px;
+        color: #fff;
+
+}
+.wepay{
+	    float: left;
+	   display: block;
+	text-align: center;
+	width:180px;
+	height: 333px;
+	    font-size: 34px;
+	    color: #fff;
+	background-color:#22ab38;
+	 transition:width 0.8s ease;
+	  writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+      
+}
+.activepay{
+	    writing-mode: horizontal-tb;
+    width: 760px;
+	background-color: #607D8B;
+}
+.direction{
+	writing-mode: horizontal-tb;
+	cursor: pointer;
+}
+.paddingL70{
+	cursor: pointer;
+	display: block;
+	margin-left: 70px;
+}
+.pickadd{
+	    height: 28px;
+    margin-top: 6px;
+}
+.shownogods{
+	    font-size: 18px;
+    color: #9E9E9E;
 }

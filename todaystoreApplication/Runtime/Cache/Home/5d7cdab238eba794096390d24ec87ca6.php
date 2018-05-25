@@ -3,11 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>今天水果商店</title>
-  <link href="/today/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
-  <script type="text/javascript" src="/today/todaystore/public/Home/js/tdjs.js"></script>
-<script type="text/javascript" src="/today/todaystore/public/Home/js/vue.min.js"></script>
-  <script type="text/javascript" src='/today/todaystore/public/Home/js/vue-resource.min.js'></script>
+  <link href="http://47.106.111.76/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
+  <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/tdjs.js"></script>
+<script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/vue.min.js"></script>
+  <script type="text/javascript" src='http://47.106.111.76/todaystore/public/Home/js/vue-resource.min.js'></script>
 </head>
 <body >
   <div id="app_index">
@@ -15,7 +15,7 @@
     <nav class="td_nav">
       <div class="td_navleft">
         <a href="tdindex.html">
-        <img src="/today/todaystore/public/Home/images/tdlogo.png" />
+        <img src="http://47.106.111.76/todaystore/public/Home/images/tdlogo.png" />
       </a>
       </div>
       <div class="td_navmiddle">
@@ -96,11 +96,11 @@
         <li class="fruit_content_li" v-for="item in fruitlocal" >
           <div class="fruit_content_center">
 
-          <img class="fruit_content_image" v-bind:src="'/today/todaystore/public/Home/images/'+item.fruitname+'.jpg'"/>
+          <img class="fruit_content_image" v-bind:src="'http://47.106.111.76/todaystore/public/Home/images/'+item.fruitname+'.jpg'"/>
           <p class="fruit_content_title">{{item.fruitname}}</p>
           <p class="fruit_content_weight">{{item.fruitweight}}g</p>
           <p class="fruit_content_price">￥{{item.fruitprice}}</p>
-          <img class="fruit_content_car" src="/today/todaystore/public/Home/images/gwc.png"/>
+          <img class="fruit_content_car" src="http://47.106.111.76/todaystore/public/Home/images/gwc.png"/>
           </div>
         </li>
       </ul>
@@ -127,6 +127,6 @@
     </div><!-- /.modal -->
   </div>
   </div>
-     <script type="text/javascript" src="/today/todaystore/public/Home/js/indexApp.js"></script>
+     <script type="text/javascript" src="http://47.106.111.76/todaystore/public/Home/js/indexApp.js"></script>
 </body>
 </html>

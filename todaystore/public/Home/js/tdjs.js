@@ -93,33 +93,52 @@ $(document).ready(function(){
 		$(".center_information_client").show();
 		$(".center_information_password").hide();
 		$(".center_information_address").hide();
+		$(".center_money").hide();
 		if($("#primary").hasClass("center_information_map_active")){}
 			else{
 				$("#primary").addClass("center_information_map_active");
 				$("#change_password").removeClass("center_information_map_active");
 				$("#your_address").removeClass("center_information_map_active");
+				$("#money").removeClass("center_information_map_active");
 			}
 		})
 	$("#change_password").click(function(){
 		$(".center_information_client").hide();
 		$(".center_information_password").show();
 		$(".center_information_address").hide();
+		$(".center_money").hide();
 		if($("#change_password").hasClass("center_information_map_active")){}
 			else{
 				$("#change_password").addClass("center_information_map_active");
 				$("#primary").removeClass("center_information_map_active");
 				$("#your_address").removeClass("center_information_map_active");
+				$("#money").removeClass("center_information_map_active");
 			}
 		})
 	$("#your_address").click(function(){
 		$(".center_information_client").hide();
 		$(".center_information_password").hide();
 		$(".center_information_address").show();
+		$(".center_money").hide();
 		if($("#your_address").hasClass("center_information_map_active")){}
 			else{
 				$("#your_address").addClass("center_information_map_active");
 				$("#primary").removeClass("center_information_map_active");
 				$("#change_password").removeClass("center_information_map_active");
+				$("#money").removeClass("center_information_map_active");
+			}
+		})
+	$("#money").click(function(){
+		$(".center_information_client").hide();
+		$(".center_information_password").hide();
+		$(".center_money").show();
+		$(".center_information_address").hide();
+		if($("#money").hasClass("center_information_map_active")){}
+			else{
+				$("#money").addClass("center_information_map_active");
+				$("#primary").removeClass("center_information_map_active");
+				$("#change_password").removeClass("center_information_map_active");
+				$("#your_address").removeClass("center_information_map_active");
 			}
 		})
 	var ss=0;  

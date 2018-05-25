@@ -29,7 +29,7 @@
       <div class="td_navright">
         <div class="floatright">
         <div class="floatright">
-         <a id="car" class="td_navright_a " v-on:click="test" >购物车</a>
+         <a id="car" class="td_navright_a " v-on:click="poplogin(2)">购物车</a>
          </div>
           <my-component-name></my-component-name>
       
@@ -78,34 +78,33 @@
           </a>
         </div>
       </div>
-      <div class="filter_list">
+      <div class="filter_list1">
         <h5 class="filter_title">排序：</h5>
-        <a class="filter_quanbu_active">
-          <span class="filter_fruit filter_active">默认</span>
+        <a class="filter_active" v-on:click="orderALLF">
+          <span class="filter_fruit ">默认</span>
         </a>
-        <div class="filter_list_name">
-          <a v-on:click="order">
+          <a v-on:click="orderUPcF()">
             <span class="filter_fruit">价格从低到高</span>
           </a> 
-          <a href="">
+          <a v-on:click="orderDOWNcF()">
             <span class="filter_fruit">价格从高到低</span>
           </a> 
-
-        </div>
       </div>
     </div>
       <div class="clear"></div>
     <div class="fruit_list">
       <ul class="fruit_content_ul">
-          <li class="fruit_content_li" v-for="(value,index) in fruitforeign">
+          <li class="fruit_content_li" v-for="item in fruitforeign" >
+            <a v-on:click="start_modelF(item.fruitid)">
           <div class="fruit_content_center">
 
-          <img class="fruit_content_image" v-bind:src="'__IMAGE__/'+value.fruitname+'.jpg'"/>
-          <p class="fruit_content_title">{{fruitname}}</p>
-          <p class="fruit_content_weight">{{fruitweight}}g</p>
-          <p class="fruit_content_price">￥{{fruitprice}}</p>
+          <img class="fruit_content_image" v-bind:src="'__IMAGE__/'+item.fruitname+'.jpg'"/>
+          <p class="fruit_content_title">{{item.fruitname}}</p>
+          <p class="fruit_content_weight">{{item.fruitweight}}g</p>
+          <p class="fruit_content_price">￥{{item.fruitprice}}</p>
           <img class="fruit_content_car" src="__IMAGE__/gwc.png"/>
           </div>
+        </a>
         </li>
       </ul>
     </div>
@@ -120,16 +119,36 @@
     </ul>
     <div class="footer_lianxi">联系人：1830219826X 高女士</div>
   </footer>
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
-    <div class="modal-dialog"> 
-      <div class="modal-content orange" ng-app="hotelApp" ng-controller="hotelCtrl3">
-
-
-
-
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
+  <div class="fruit_model_bg hidden" style="">
+  <a class="close_model_a" v-on:click="start_model(0)">
+    <img src="__IMAGE__/close_model.png" >
+  </a>
+  <div class="model_content">
+    <div v-for="item in onefruit">
+      <table>
+        <tr>
+          <td><img class="width350" v-bind:src="'__IMAGE__/'+item.fruitname+'.jpg'"/></td>
+          <td><img class="width350" v-bind:src="'__IMAGE__/'+item.fruitname+'.jpg'"/></td>
+          <td class="paddingL45">
+            <h2 class="content3">{{item.fruitname}}</h2>
+            <h6 class="content2">{{item.fruitweight}}g</h6>
+            <h4 class="content1">￥{{item.fruitprice}}</h4>
+            <h6 class="content2">剩{{item.fruitleft}}件</h6>
+            <input class="cut change_carnum" value="-" type="button" v-on:click="car_num--">
+            <input class="amount" type="text" value="1" v-model="car_num">
+            <input class="add change_carnum" value="+" type="button" v-on:click="car_num++">
+            <input type="submit" class="change_carnum" v-on:click="sub_car(item.fruitid)" value="加入购物车">
+            <div class="content_bottom">
+              存储方法 0°冷藏<br>
+              商品编号 {{item.fruitid}}<br>
+              多吃水果补充维生素~<br>（在购物车进行结算哦）
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
+</div>
 </div>
      <script type="text/javascript" src="__JS__/indexApp.js"></script>
 </body>

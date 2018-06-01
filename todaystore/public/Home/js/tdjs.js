@@ -68,26 +68,30 @@ $(document).ready(function(){
 	$("#this_person").click(function(){
 		$(".center_client").children(":not('.center_nav')").hide();
 		$(".center_information").show();
+		$("#this_person").parent().children().removeClass('center_nav_active');
+  $("#this_person").addClass('center_nav_active');
 	})
-	$("#this_car").click(function(){
-		$(".center_client").children(":not('.center_nav')").hide();
-		$(".center_car").show();
-	})
-	$("#this_doing_table").click(function(){
-		$(".center_client").children(":not('.center_nav')").hide();
-		$(".center_doing_table").show();
-	})
-	$("#this_finished_table").click(function(){
-		$(".center_client").children(":not('.center_nav')").hide();
-		$(".center_finished_table").show();
-	})
-	$("#this_tables").click(function(){
-		$(".center_client").children(":not('.center_nav')").hide();
-		$(".center_tables").show();
-	})
+	// $("#this_car").click(function(){
+	// 	$(".center_client").children(":not('.center_nav')").hide();
+	// 	$(".center_car").show();
+	// })
+	// $("#this_doing_table").click(function(){
+	// 	$(".center_client").children(":not('.center_nav')").hide();
+	// 	$(".center_doing_table").show();
+	// })
+	// $("#this_finished_table").click(function(){
+	// 	$(".center_client").children(":not('.center_nav')").hide();
+	// 	$(".center_finished_table").show();
+	// })
+	// $("#this_tables").click(function(){
+	// 	$(".center_client").children(":not('.center_nav')").hide();
+	// 	$(".center_tables").show();
+	// })
 	$("#this_fankui").click(function(){
 		$(".center_client").children(":not('.center_nav')").hide();
 		$(".center_fankui").show();
+		$("#this_fankui").parent().children().removeClass('center_nav_active');
+  $("#this_fankui").addClass('center_nav_active');
 	})
 	$("#primary").click(function(){
 		$(".center_information_client").show();

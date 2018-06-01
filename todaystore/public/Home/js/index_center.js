@@ -20,11 +20,17 @@ new Vue({
     paytab: 0,
     leftmoney: '',
     moneyed: '',
-    pickwhich: 999
+    pickwhich: 999,
+    finishlist: [],
+    unfinishlist: [],
+    tuilist: [],
+    allbuylist: [],
+    cookie: sessionStorage.getItem("user_phone")
   },
   mounted: function() { 
     this.judge_car();
     this.init_add();
+    this.init_list();
     this.init_money();
   },
   components: {
@@ -53,6 +59,38 @@ new Vue({
   },
 },
 methods: { 
+  init_list: function(){
+    // console.log(this);
+    var that=this;
+    var formData1 = new FormData();
+    formData1.append('phone', sessionStorage.getItem("user_phone"));
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=initbuy',formData1).then(response => {
+      var j=0;
+            var k=0;
+            var o=0;
+            // console.log(that.fruit);
+            that.allbuylist=response.data;
+            // console.log(response);
+            for(var i=0;i<response.data.length;i++){
+              if(response.data[i].liststatus==0)
+              {
+                that.finishlist[j]=response.data[i];
+                j++;
+              }
+              else if(response.data[i].liststatus==1){
+                that.unfinishlist[k]=response.data[i];
+                k++;
+                
+              }
+              else{
+                that.tuilist[o]=response.data[i];
+                o++;
+              }
+            }
+      // alert("删除成功！");
+      // location.reload();
+    })
+  },
   delthiscar: function(e){
     var formData1 = new FormData();
     formData1.append('phone', sessionStorage.getItem("user_phone"));
@@ -62,6 +100,17 @@ methods: {
       alert("删除成功！");
       location.reload();
     })
+  },
+  goTui: function(e){
+    var formData1 = new FormData();
+    formData1.append('listid', e);
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=tuihuo',formData1).then(response => {
+       if(response.data.info=='ok'){
+      alert("已将订单申请退货！");
+      location.reload();
+      }
+    })
+
   },
   gopay: function(e,key){
     var len=this.carlist.length;
@@ -83,7 +132,7 @@ methods: {
   for(var i=0;i<len;i++){
     if($("#fruit"+i+"").is(':checked')){
       var fruitid=this.carlist[i].fruitid;
-    
+    var fruitnum=this.carlist[i].fruitnum;
     var currentDT = new Date();  
   var y,m,date,day,hs,ms,ss,theDateStr;  
   y = currentDT.getFullYear(); //四位整数表示的年份  
@@ -104,9 +153,11 @@ methods: {
     formData1.append('friendphone', fphone);
     formData1.append('id', currentDT.getTime());
     formData1.append('fruitid', fruitid);
+    formData1.append('fruitnum', fruitnum);
     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=addbuylist',formData1).then(response => {
       if(response.data.info="ok,deleted"){
         alert("恭喜下单成功！");
+        this.judge_car(3);
       }
     })
     }}
@@ -259,18 +310,51 @@ init_money: function(){
     }
   })
 },
-judge_car: function(){
+subfankui: function(){
+  var textarea=$(".fankui_content").val();
+  if(textarea==''){
+    alert('请输入反馈内容！');
+  }else{
+    var formData = new FormData();
+  formData.append('phone', sessionStorage.getItem("user_phone"));
+  formData.append('content', textarea);
+  this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=dofankui',formData).then(response => {
+    if(response.data.info="ok")
+      alert("反馈成功！");
+    })
+  }
+},
+judge_car: function(e){
  var url=window.location.href;
  var aa=url.indexOf('=');
- if (aa == -1){
-  return "";
-}
+//  if (aa == -1){
+//   return "";
+// }
 url=url.substring(aa+1);
-if(url==2){
+if(url==2||e==2){
   $(".center_client").children(":not('.center_nav')").hide();
   $(".center_car").show();
+  $("#this_car").parent().children().removeClass('center_nav_active');
+  $("#this_car").addClass('center_nav_active');
   this.init_car();
 }
+if(e==3){
+  $(".center_client").children(":not('.center_nav')").hide();
+    $(".center_doing_table").show();
+    $("#this_doing_table").parent().children().removeClass('center_nav_active');
+  $("#this_doing_table").addClass('center_nav_active');
+    this.init_car();
+}else if(e==4){
+  $(".center_client").children(":not('.center_nav')").hide();
+    $(".center_finished_table").show();
+    $("#this_finished_table").parent().children().removeClass('center_nav_active');
+  $("#this_finished_table").addClass('center_nav_active');
+  }else if(e==5){
+    $(".center_client").children(":not('.center_nav')").hide();
+    $(".center_tables").show();
+    $("#this_tables").parent().children().removeClass('center_nav_active');
+  $("#this_tables").addClass('center_nav_active');
+  }
 },
 
 start_model: function(e,key){
@@ -296,35 +380,46 @@ start_model: function(e,key){
   formData.append('phone', sessionStorage.getItem("user_phone"));
   formData.append('time', theDateStr);
   formData.append('status', 0);
-  if(key=1){
-              var money=50;
-             
-            }else if(key=2){
-              var money=100;
-      
-            }else if(key=3){
-              var money=300;
-       
+  // console.log(key);
+
+  if(this.pay==1){
+    alert(2)
+               money=50;             
+            } if(this.pay==2){
+               money=100;     
+               alert(1)
+            } if(this.pay==3){
+               money=200;      
             }
-            else if(key=4){
-              var money=500;
-         
+             if(this.pay==4){
+               money=500;
             }
-           
 formData.append('money',money);
- if(this.moneyed!=33)  {  
+console.log(this.moneyed);
+ if(this.moneyed==33)  {  
   
   this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=addmoney',formData).then(response => {
     this.addresslist=response.data;
+       $(".fruit_model_bg").toggleClass("hidden");
+          $("#except_model").toggleClass("is_model");
+          $("body").toggleClass("nosrcoll");
       })
   }else{
     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=upmoney',formData).then(response => {
     this.addresslist=response.data;
+       $(".fruit_model_bg").toggleClass("hidden");
+          $("#except_model").toggleClass("is_model");
+          $("body").toggleClass("nosrcoll");
       })
   }
 
         }
-          }
+        // else{
+        //   $(".fruit_model_bg").toggleClass("hidden");
+        //   $("#except_model").toggleClass("is_model");
+        //   $("body").toggleClass("nosrcoll");
+        //   }
+        }
         },
         changepay: function(){
           $(".wepay").toggleClass("activepay");

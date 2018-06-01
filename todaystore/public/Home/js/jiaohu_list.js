@@ -3,11 +3,13 @@
   data: {
     listdata: '',
     listarray: [],
-    whichstatu: ''
-    
+    whichstatu: '',
+    whichmonstatu: '',
+    money: []
   },
   created: function() { 
     this.list();
+    this.initmoney();
 
   },
   computed: {
@@ -27,7 +29,16 @@ return that.listarray;
 },
   },
   methods: {
-
+initmoney: function(){
+  var that =this;
+  this.$http.get('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=mon_list').then(response => {
+            // that.fruit=response.data;
+            that.money= response.data;
+            // console.log(that.fruitlists);
+          }, response => {
+    // error callback
+  });
+},
     
 list: function(){
   var that=this;
@@ -39,6 +50,27 @@ list: function(){
     // error callback
   });
 
+},
+upmonstatu: function (e,date){
+  if(this.whichmonstatu ==0){
+   var msg = "你确定已收到？"; 
+  }
+  if (confirm(msg)==true){ 
+  var formstatu =new FormData();
+    formstatu.append('phone', e);
+    formstatu.append('money', date);
+    formstatu.append('status', this.whichmonstatu);
+    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=upmonstatus',formstatu).then(response => {
+            // that.fruit=response.data;
+            // that.fruitlists= response.data;
+            console.log(response.data);
+          // location.reload();
+          }, response => {
+    // error callback
+  });
+ }else{ 
+  return false; 
+ } 
 },
 upliststatu: function(listid){
   if(this.whichstatu ==0){

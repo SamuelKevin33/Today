@@ -1,0 +1,20 @@
+[ 2018-06-01T09:03:19+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002749s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0293s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0025s ]
+
+[ 2018-06-01T11:17:36+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0006s ]
+

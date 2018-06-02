@@ -1,0 +1,10 @@
+[ 2018-06-02T13:31:31+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001571s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0017s ]
+

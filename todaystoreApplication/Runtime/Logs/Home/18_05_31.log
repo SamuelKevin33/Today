@@ -1,0 +1,150 @@
+[ 2018-05-31T11:37:04+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002431s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0157s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0017s ]
+
+[ 2018-05-31T18:44:37+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001726s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0197s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0019s ]
+
+[ 2018-05-31T18:48:58+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=client_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0278s ]
+SQL: SELECT * FROM `client_information`  [ RunTime:0.0016s ]
+
+[ 2018-05-31T18:49:06+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0150s ]
+SQL: UPDATE `client_information` SET `clientname`='1111',`clientphone`='18302198264',`clientplace`='' WHERE `clientid` = 6076 [ RunTime:0.0059s ]
+
+[ 2018-05-31T18:49:08+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0059s ]
+SQL: UPDATE `client_information` SET `clientname`='1111',`clientphone`='18302198264',`clientplace`='' WHERE `clientid` = 6076 [ RunTime:0.0041s ]
+
+[ 2018-05-31T18:49:09+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0221s ]
+SQL: UPDATE `client_information` SET `clientname`='1111',`clientphone`='18302198264',`clientplace`='' WHERE `clientid` = 6076 [ RunTime:0.0048s ]
+
+[ 2018-05-31T18:49:10+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0168s ]
+SQL: UPDATE `client_information` SET `clientname`='1111',`clientphone`='18302198264',`clientplace`='' WHERE `clientid` = 6076 [ RunTime:0.0058s ]
+
+[ 2018-05-31T18:49:11+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0127s ]
+SQL: UPDATE `client_information` SET `clientname`='1111',`clientphone`='18302198264',`clientplace`='' WHERE `clientid` = 6076 [ RunTime:0.0056s ]
+
+[ 2018-05-31T18:49:23+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0045s ]
+SQL: UPDATE `client_information` SET `clientname`='1111',`clientphone`='18302198264',`clientplace`='山西省' WHERE `clientid` = 6076 [ RunTime:0.0039s ]
+
+[ 2018-05-31T18:49:29+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0163s ]
+SQL: UPDATE `client_information` SET `clientname`='杨文昊',`clientphone`='18302198269',`clientplace`='云南省' WHERE `clientid` = 6080 [ RunTime:0.0051s ]
+
+[ 2018-05-31T18:49:38+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=updateclient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0153s ]
+SQL: UPDATE `client_information` SET `clientname`='韩宇',`clientphone`='18302192828',`clientplace`='湖北省' WHERE `clientid` = 6081 [ RunTime:0.0055s ]
+
+[ 2018-05-31T18:52:15+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0006s ]
+
+[ 2018-05-31T18:52:24+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-05-31T19:02:08+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002172s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0204s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0025s ]
+
+[ 2018-05-31T19:04:19+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001607s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0224s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0018s ]
+

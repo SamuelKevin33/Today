@@ -13,6 +13,31 @@ class IndexController extends Controller {
   public function index(){
     $this->redirect('tdindex');
   }
+  public function tuihuo(){
+    $listid=I('listid');
+    // echo $listid;
+    $fruitlistModel=new \Home\Model\IndexModel('client_buylist');
+    $data=array(
+      'liststatus' => 2,
+    );
+     if(!($fruitlistModel->where(array('listid' => $listid))->save($data))){
+      $this.error('更改失败');
+    }else{
+       $data1 = array(  
+        'info' => 'ok',  
+                // 'sessonname' => $user['username']
+      );
+      $this->ajaxReturn($data1); 
+    }
+  }
+  public function initbuy(){
+    $phone=I('phone');
+    if(!empty($phone)){
+    $fruitlistModel=new \Home\Model\IndexModel('client_buylist');
+    $rows=$fruitlistModel->where(array('listphone' => $phone))->order('listid desc')->select();
+    $this->ajaxReturn($rows); 
+    }
+  }
   public function initlist(){
     $fruitlistModel=new \Home\Model\IndexModel('fruit');
     $rows=$fruitlistModel->select();
@@ -82,11 +107,31 @@ public function upclientpwd(){
   }
 }
 }
+public function dofankui(){
+  $phone=I('phone');
+  $content=I('content');
+  if(!empty($phone)){
+   $model=new \Home\Model\IndexModel('fankui');
+   $data = array(  
+    'clientphone' => $phone,  
+    'clientcontent' => $content,
+    'fankuistatu' =>1,
+  );
+   if(!($model->add($data))){
+    $this->error('注册失败');
+  }
+  else{
+    $data1 = array(  
+      'info' => 'OK',  
+    );
+    $this->ajaxReturn($data1);  }
+  }
+}
 public function selectmon(){
   $phone=I('phone');
   if(!empty($phone)){
    $model=new \Home\Model\IndexModel('client_money');
-   $res=$model->where(array('clientphone' => $phone))->select();
+   $res=$model->where(array('phone' => $phone))->select();
    $data1 = array(  
     'info' => $res[0]['nowmoney'], 
     'info2' => $res[0]['money'],   
@@ -111,6 +156,7 @@ public function addbuylist(){
   $address=I('address');
   $id=I('id');
   $fruitid=I('fruitid');
+  $fruitnum=I('fruitnum');
   if(!empty($phone)){
    $model=new \Home\Model\IndexModel('client_buylist');
    $data = array(  
@@ -144,12 +190,23 @@ public function addbuylist(){
           $this.error('删除失败');
         }
         else{
+          $model6=new \Home\Model\IndexModel('fruit');
+          $res6=$model6->where(array('fruitid' => $fruitid))->field('fruitleft')->select();
+   $left=$res6[0]['fruitleft']-$fruitnum;
+   $data6 = array(  
+    'fruitleft' => $left,
+                // 'sessonname' => $user['username']
+  );
+   if(!($model6->where(array('fruitid' => $fruitid))->save($data6))){
+    $this->error('删除失败');
+  }else{
           $data1 = array(  
-            'info' => 'ok,deleted',  
+            'info' => 'ok',  
                 // 'sessonname' => $user['username']
           );
            $this->ajaxReturn($data1); 
        }
+}
 }
 }
 }
@@ -229,16 +286,18 @@ public function deleteadd(){
 public function deletethiscar(){
   $phone=I('phone');
   $fruitid=I('fruitid');
+  if(!empty($phone)){
   $model=new \Home\Model\BackModel('car');
   if(!($model->where(array('clientid' => $phone,'fruitid' => $fruitid,))->delete())){
     $this.error('删除失败');
   }
   else{
     $data1 = array(  
-      'info' => 'ok,deleted',  
+      'info' => 'delete',  
                 // 'sessonname' => $user['username']
     );
     $this->ajaxReturn($data1); 
+  }
   }
 }
 public function upclientadd(){
@@ -353,7 +412,8 @@ public function upcar(){
     else{
     	$data1 = array(  
         'info' => $phone,  
-        'name' => $name
+        'name' => $name,
+        'res' => 'oksign'
                 // 'sessonname' => $user['username']
       );
     	$this->ajaxReturn($data1);  }

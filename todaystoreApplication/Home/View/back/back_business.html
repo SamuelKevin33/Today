@@ -35,7 +35,34 @@
       </ul>
     </nav>
     <div>
+<div class="newstitle">充值订单管理</div>
+<div class="newscontent">
+<table class="show_bus">
+          <thead>
+            <tr>
+              <th>订单电话</th>
+              <th>订单金额</th>
+              <th>订单时间</th>
+              <th>订单状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(value,key) in money">
+              <td>{{value.phone}}</td>
+              <td>{{value.money}}</td>
+              <td>{{value.date}}</td>
+              <td>
+                <a v-if="value.status==0" v-on:click="upmonstatu(value.phone,value.money)">确认充入</a>
+                <span v-else>不可操作</span>
+              </td>
+            </tr>
+            
 
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+<div class="newstitle">商品订单管理</div>
       <div class="newscontent">
           <input type="" name="" class="searchbus_inp" v-model="listdata">
           <span class="searchbus_btn">搜索</span>
@@ -45,7 +72,7 @@
           <thead>
             <tr>
               <th>订单编号</th>
-              <th>用户编号</th>
+              <th>用户电话</th>
               <th>订单时间</th>
               <th>订单价格</th>
               <th>订单地址</th>
@@ -56,11 +83,11 @@
           </thead>
           <tbody>
             <tr v-for="(value,key) in searchData">
-              <td>{{value.clientid}}</td>
               <td>{{value.listid}}</td>
+              <td>{{value.listphone}}</td>
               <td>{{value.listtime}}</td>
               <td>{{value.listprice}}</td>
-              <td>{{value.listphone}}</td> 
+              <td>{{value.friendphone}}</td> 
               <td>{{value.listaddress}}</td> 
               <td v-if="value.liststatus=== '1'">未完成</td> 
               <td v-else-if="value.liststatus === '0'">已完成</td>  

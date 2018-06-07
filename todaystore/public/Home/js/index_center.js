@@ -96,9 +96,12 @@ methods: {
     formData1.append('phone', sessionStorage.getItem("user_phone"));
     formData1.append('fruitid', e);
     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=deletethiscar',formData1).then(response => {
-
+      if(response.data.info=='delete'){
       alert("删除成功！");
       location.reload();
+      }else{
+        alert('失败啦！')
+      }
     })
   },
   goTui: function(e){
@@ -114,13 +117,18 @@ methods: {
   },
   gopay: function(e,key){
     var len=this.carlist.length;
-    var havechoose;
+    var havechoose=0;
   for(var i=0;i<len;i++){
-    if($("#fruit"+i+"").is(':checked')){
-      var havechoose=111;
+    if($("#fruit"+i+"").is(':checked') ){
+      havechoose++;
+      
     }
   }
-  if(havechoose!=111){
+  if(havechoose!=1){
+      alert('不好意思亲，一次只买一种，咱慢慢来！');
+      return;
+      }
+  if(havechoose==0){
     alert("请选择商品！");
   }else{
     if(this.pickwhich==999){
@@ -141,7 +149,7 @@ methods: {
   hs = currentDT.getHours(); //时  
   ms = currentDT.getMinutes(); //分  
   ss = currentDT.getSeconds(); //秒  
-  theDateStr = y+"年"+  m +"月"+date+"日 "+hs+":"+ms+":"+ss;  
+  theDateStr = y+"年"+  (m+1) +"月"+date+"日 "+hs+":"+ms+":"+ss;  
   var add=this.addresslist[key].friendplace;
   var fphone=this.addresslist[key].friendphone;
     var formData1 = new FormData();
@@ -155,7 +163,7 @@ methods: {
     formData1.append('fruitid', fruitid);
     formData1.append('fruitnum', fruitnum);
     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=addbuylist',formData1).then(response => {
-      if(response.data.info="ok,deleted"){
+      if(response.data.info=="ok"){
         alert("恭喜下单成功！");
         this.judge_car(3);
       }
@@ -319,7 +327,7 @@ subfankui: function(){
   formData.append('phone', sessionStorage.getItem("user_phone"));
   formData.append('content', textarea);
   this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=dofankui',formData).then(response => {
-    if(response.data.info="ok")
+    if(response.data.info=="OK")
       alert("反馈成功！");
     })
   }
@@ -383,11 +391,9 @@ start_model: function(e,key){
   // console.log(key);
 
   if(this.pay==1){
-    alert(2)
                money=50;             
             } if(this.pay==2){
                money=100;     
-               alert(1)
             } if(this.pay==3){
                money=200;      
             }

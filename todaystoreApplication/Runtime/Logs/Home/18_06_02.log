@@ -8,3 +8,243 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001571s ]
 SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0194s ]
 SQL: SELECT * FROM `fankui`  [ RunTime:0.0017s ]
 
+[ 2018-06-02T15:45:52+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001740s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0006s ]
+
+[ 2018-06-02T15:45:54+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0234s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0024s ]
+
+[ 2018-06-02T15:45:55+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0007s ]
+
+[ 2018-06-02T15:51:56+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001666s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0255s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0017s ]
+
+[ 2018-06-02T17:19:01+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T17:19:04+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T17:19:12+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001337s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0207s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0018s ]
+
+[ 2018-06-02T17:19:20+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0013s ]
+
+[ 2018-06-02T18:15:06+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T18:15:08+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T18:15:55+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T18:16:55+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T18:16:57+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=client_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `client_information`  [ RunTime:0.0003s ]
+
+[ 2018-06-02T18:17:01+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0004s ]
+
+[ 2018-06-02T18:17:06+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui_finish
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0087s ]
+SQL: UPDATE `fankui` SET `fankuistatu`='0' WHERE `fankuiid` = 15 [ RunTime:0.0047s ]
+
+[ 2018-06-02T18:17:14+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fankui
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `fankui` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `fankui`  [ RunTime:0.0004s ]
+
+[ 2018-06-02T18:40:57+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0009s ]
+
+[ 2018-06-02T18:40:59+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=client_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `client_information`  [ RunTime:0.0004s ]
+
+[ 2018-06-02T18:41:02+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=client_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `client_information` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `client_information`  [ RunTime:0.0012s ]
+
+[ 2018-06-02T18:41:03+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0014s ]
+
+[ 2018-06-02T18:41:30+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0008s ]
+
+[ 2018-06-02T18:41:47+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0005s ]
+
+[ 2018-06-02T19:02:46+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0006s ]
+
+[ 2018-06-02T21:20:01+08:00 ] ::1 /today/todaystore/index.php?m=Home&c=back&a=fruitlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+SQL: SHOW COLUMNS FROM `fruit` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `fruit`  [ RunTime:0.0018s ]
+

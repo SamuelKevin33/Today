@@ -10,6 +10,7 @@
   <script type="text/javascript" src='__JS__/vue-resource.min.js'></script>
 </head>
 <body>
+  <div id="thisapp">
   <header class="bc_header">
     <nav class="bc_nav">
       <div class="bc_navleft">
@@ -39,10 +40,10 @@
           <label class="newscontent_title">基本信息</label>
           <br><br>
           <ul id="change">
-            <li class="newscontent_item bColor1"><span class="data_important">36</span><br>商品种类</li>
-            <li class="newscontent_item bColor2"><span class="data_important">5</span><br>未处理反馈</li>
-            <li class="newscontent_item bColor3"><span class="data_important">1003</span><br>用户数量</li>
-            <li class="newscontent_item bColor4"><span class="data_important">2018/5/5</span><br>今天</li>
+            <li class="newscontent_item bColor1"><span class="data_important">{{fruitlen}}</span><br>商品种类</li>
+            <li class="newscontent_item bColor2"><span class="data_important">{{fankuilen}}</span><br>未处理反馈</li>
+            <li class="newscontent_item bColor3"><span class="data_important">{{renlen}}</span><br>用户数量</li>
+            <li class="newscontent_item bColor4"><span class="data_important">{{date}}</span><br>今天</li>
           </ul>
         </div>
         <div class="newscontent">
@@ -51,23 +52,13 @@
           <div class="xiaoxilan_div" style="height:160px;overflow: hidden;">
 
             <ul id="xiaoxilan">
-             <li>用户1 2018-4-22 14：31下单啦,请尽快发货</li>
-             <li>用户2 2018-4-22 14：32下单啦,请尽快发货</li>
-             <li>用户3 2018-4-22 14：33下单啦,请尽快发货</li>
-             <li>用户4 2018-4-22 14：34下单啦,请尽快发货</li>
-             <li>用户5 2018-4-22 14：35下单啦,请尽快发货</li>
-             <li>用户6 2018-4-22 14：36下单啦,请尽快发货</li>
-             <li>用户7 2018-4-22 14：37下单啦,请尽快发货</li>
-             <li>用户8 2018-4-22 14：38下单啦,请尽快发货</li>
-             <li>用户9 2018-4-22 14：39下单啦,请尽快发货</li>
-             <li>用户10 2018-4-22 14：28下单啦,请尽快发货</li>
-             <li>用户11 2018-4-22 14：48下单啦,请尽快发货</li>
+             <li v-for="item in unflist">用户{{item.listphone.substring(7,11)}} {{item.listtime.substring(5,18)}}下单啦,请尽快发货</li>
            </ul>
          </div>
          <ul class="mark_color">
-           <li>未完成订单 50%</li>
-           <li>已完成订单 30%</li>
-           <li>退货订单   20%</li>
+           <li>未完成订单 {{unf}}%</li>
+           <li>已完成订单 {{fin}}%</li>
+           <li>退货订单   {{tui}}%</li>
          </ul>
          <div class="pie_chart">
           <div id="browse-IE" class="hold">
@@ -101,8 +92,6 @@
     </div>
   </section>
 </div><!-- /.modal-content -->
-</div><!-- /.modal -->
-</div>
    <script type="text/javascript" src="__JS__/jiaohu.js"></script>
 </body>
 </html>

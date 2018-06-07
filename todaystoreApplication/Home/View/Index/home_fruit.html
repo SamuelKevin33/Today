@@ -23,7 +23,7 @@
          <li><a class="td_navlink " href="tdindex.html">首页</a></li>
           <li><a class="td_navlink td_navmask" href="home_fruit.html">国内水果</a></li>
           <li><a class="td_navlink" href="foreign_fruit.html">进口水果</a></li>
-          <li><a class="td_navlink" href="center.html">个人中心</a></li>
+          <li><a class="td_navlink" v-on:click="poplogin(2)">个人中心</a></li>
         </ul>
       </div>
      <div class="td_navright">
@@ -41,39 +41,36 @@
     <div class="filter">
       <div class="filter_list">
         <h5 class="filter_title">分类：</h5>
-        <a class="filter_quanbu_active">
+        <a class="filter_quanbu_active" v-on:click="filterfruitType('默认')">
           <span class="filter_fruit filter_active">全部</span>
         </a>
         <div class="filter_list_name">
-          <a v:on-click="filterfruitType('苹果'')">
+          <a v-on:click="filterfruitType('苹果')">
             <span class="filter_fruit">苹果</span>
           </a>
-          <a v:on-click="filterfruitType('梨子')">
+          <a v-on:click="filterfruitType('梨子')">
             <span class="filter_fruit">梨子</span>
           </a>
-           <a v:on-click="filterfruitType('番茄')">
+           <a v-on:click="filterfruitType('番茄')">
             <span class="filter_fruit">番茄</span>
           </a>
-           <a v:on-click="filterfruitType('榴莲')">
+           <a v-on:click="filterfruitType('榴莲')">
             <span class="filter_fruit">榴莲</span>
           </a>
-           <a v:on-click="filterfruitType('奇异果')">
+           <a v-on:click="filterfruitType('奇异果')">
             <span class="filter_fruit">奇异果</span>
           </a>
-          <a v:on-click="filterfruitType('火龙果')">
+          <a v-on:click="filterfruitType('火龙果')">
             <span class="filter_fruit">火龙果</span>
           </a>
-          <a v:on-click="filterfruitType('百香果')">
+          <a v-on:click="filterfruitType('百香果')">
             <span class="filter_fruit">百香果</span>
           </a>
-          <a v:on-click="filterfruitType('牛油果')">
+          <a v-on:click="filterfruitType('牛油果')">
             <span class="filter_fruit">牛油果</span>
           </a>
-          <a v:on-click="filterfruitType('香蕉')">
+          <a v-on:click="filterfruitType('香蕉')">
             <span class="filter_fruit">香蕉</span>
-          </a>
-          <a v:on-click="filterfruitType('李子')">
-            <span class="filter_fruit">李子</span>
           </a>
         </div>
       </div>

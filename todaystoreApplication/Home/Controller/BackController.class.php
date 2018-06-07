@@ -14,7 +14,7 @@ class BackController extends Controller {
   }
  public function business_list(){
   $buslistModel=new \Home\Model\BackModel('client_buylist');
-    $rows=$buslistModel->select();
+    $rows=$buslistModel->order('listid desc')->select();
     $this->ajaxReturn($rows); 
  }
  public function client_list(){
@@ -22,10 +22,40 @@ class BackController extends Controller {
     $rows=$infoModel->select();
     $this->ajaxReturn($rows); 
  }
+ public function mon_list(){
+  $infoModel=new \Home\Model\BackModel('client_money');
+    $rows=$infoModel->select();
+    $this->ajaxReturn($rows); 
+ }
  public function fankui(){
   $fanModel=new \Home\Model\BackModel('fankui');
     $rows=array_reverse($fanModel->select());
     $this->ajaxReturn($rows); 
+ }
+ public function upmonstatus(){
+  $phone=I('phone');
+  $money=I('money');
+  if(!empty(I('phone'))){
+   $model=new \Home\Model\BackModel('client_money');
+   $res=$model->where(array('phone' => $phone))->field('nowmoney')->select();
+   $money=$res[0]['nowmoney']+$money;
+        $data=array(
+          'status' => 1,
+          'nowmoney' => $money,
+          'money' => 0
+        );
+
+        if(!($model->where(array('phone' => $phone))->save($data))){
+            $this.error('更改失败');
+        }
+        else{
+          $data1 = array(  
+            'info' => '12',  
+                // 'sessonname' => $user['username']
+          );
+          $this->ajaxReturn($data1); 
+  }
+ }
  }
  public function fankui_finish(){
   if(!empty(I('listid'))){
@@ -38,7 +68,7 @@ class BackController extends Controller {
         }
         else{
           $data1 = array(  
-            'info' => 'ok,changed',  
+            'info' => 'changed',  
                 // 'sessonname' => $user['username']
           );
           $this->ajaxReturn($data1); 
@@ -88,7 +118,7 @@ public function updateclient(){
         }
         else{
           $data1 = array(  
-            'info' => 'ok,changed',  
+            'info' => 'ok',  
                 // 'sessonname' => $user['username']
           );
           $this->ajaxReturn($data1);  
@@ -122,10 +152,11 @@ public function updateclient(){
             if($images){
               $info=$images['Filedata']['savepath'].$images['Filedata']['savename'];
                 //返回文件地址和名给JS作回调用
-              echo $info;
-              echo "yesimg!";
+              // echo $info;
+              // echo "yesimg!";
             }else{
                 $this->error($upload->getError());//获取失败信息
+                echo "99";
               }
 
 
@@ -182,7 +213,7 @@ public function updateclient(){
         }
         else{
           $data1 = array(  
-            'info' => 'ok,deleted',  
+            'info' => 'ok',  
                 // 'sessonname' => $user['username']
           );
        }
@@ -200,7 +231,7 @@ public function updateclient(){
         }
         else{
           $data1 = array(  
-            'info' => 'ok,deleted',  
+            'info' => 'deleted',  
                 // 'sessonname' => $user['username']
           );
           $this->ajaxReturn($data1); 
@@ -228,7 +259,7 @@ public function updateclient(){
         }
         else{
           $data1 = array(  
-            'info' => 'ok,changed',  
+            'info' => 'changed',  
                 // 'sessonname' => $user['username']
           );
           $this->ajaxReturn($data1);  

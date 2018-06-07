@@ -34,8 +34,8 @@
         <li class="selected_map_bc"><div class="selected_map"></div>反馈管理</li>
       </ul>
     </nav>
-    <div>
-        <div class="newscontent" v-for="(value,key) in searchData">
+    <div class="right_goods">
+        <div class="newscontent" v-for="(value,key) in listarray">
             <div class="info_li" >
             <label class="infofan_id" v-if="value.fankuistatu==0">状态：已处理</label>
             <label class="infofan_id" v-else>状态：未处理</label>

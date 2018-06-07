@@ -52,17 +52,19 @@ list: function(){
 
 },
 upmonstatu: function (e,date){
-  if(this.whichmonstatu ==0){
    var msg = "你确定已收到？"; 
-  }
+  
   if (confirm(msg)==true){ 
   var formstatu =new FormData();
     formstatu.append('phone', e);
     formstatu.append('money', date);
-    formstatu.append('status', this.whichmonstatu);
     this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=back&a=upmonstatus',formstatu).then(response => {
             // that.fruit=response.data;
             // that.fruitlists= response.data;
+            if(response.data.info=="12"){
+              alert('充入成功！');
+              location.reload();
+            }
             console.log(response.data);
           // location.reload();
           }, response => {

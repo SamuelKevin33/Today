@@ -151,7 +151,52 @@ start_model: function(e){
           $("body").toggleClass("nosrcoll");
         },
         filterfruitType: function(type){
-
+          // alert(1);
+          var that = this;
+          var arr=that.fruitlocal2.slice(0,that.fruitlocal2.length);
+          var len=arr.length;
+          var arr6=new Array();
+          var j=0;
+          if(type=="默认"){
+            // alert(1);
+            arr6=arr.slice(0,arr.length);
+          }else{
+          for (var i=0;i<len;i++){
+            if(arr[i].fruittype==type){
+              arr6[j]=arr[i];
+              j++;
+            }
+          }
+          }
+          console.log(arr6);
+         Vue.nextTick(function () {
+          // alert(1)
+            that.fruitlocal =arr6;
+          })
+        },
+        filterfruitTypeF: function(type){
+          // alert(1);
+          var that = this;
+          var arr=that.fruitforeign2.slice(0,that.fruitforeign2.length);
+          var len=arr.length;
+          var arr6=new Array();
+          var j=0;
+          if(type=="默认"){
+            // alert(1);
+            arr6=arr.slice(0,arr.length);
+          }else{
+          for (var i=0;i<len;i++){
+            if(arr[i].fruittype==type){
+              arr6[j]=arr[i];
+              j++;
+            }
+          }
+          }
+          console.log(arr6);
+         Vue.nextTick(function () {
+          // alert(1)
+            that.fruitforeign =arr6;
+          })
         },
         orderALL: function(){
 
@@ -286,6 +331,7 @@ start_model: function(e){
             //   that.fruitlocal2=test;
 
             that.fruitlocal=fruitlocal1;
+            console.log(fruitlocal1);
             that.fruitforeign=fruitforeign1;
             // return{
             //             fruitlocal:data[0].data.knowledgeList,
@@ -350,7 +396,7 @@ start_model: function(e){
     if(logn.test(that.client.phone)==false){
      alert("请输入正确手机号码");
    }else if(logp.test(that.client.password)==false){
-    alert("请输入六位密码");
+    alert("请输入六位数字密码");
   }
   else{
    var formData = new FormData();
@@ -358,10 +404,14 @@ start_model: function(e){
    formData.append('phone',that.client.phone);
    formData.append('password',that.client.password);
    this.$http.post('http://47.106.111.76/todaystore/index.php?m=Home&c=index&a=signit', formData).then(response => {
-    alert('登录成功啦！');
+    if(response.data.res=='oksign'){
+    alert('注册成功啦！');
     sessionStorage.setItem('user_name', response.data.name);
     sessionStorage.setItem('user_phone', response.data.info);
     window.location.href="tdindex.html";
+  }else{
+    alert("注册失败！")
+  }
   }, response => {
     alert("此电话号码已被注册");
     // error callback

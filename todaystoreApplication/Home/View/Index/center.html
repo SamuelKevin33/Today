@@ -1,13 +1,14 @@
+
 <!DOCTYPE>
 <html>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>今天水果商店</title>
-  <link href="__CSS__/tdcss.css" type="text/css" rel="stylesheet"/>
-  <script type="text/javascript" src="__JS__/jquery-3.2.1.min.js"></script>  
-  <script type="text/javascript" src="__JS__/tdjs.js"></script>
-   <script type="text/javascript" src="__JS__/vue.min.js"></script>
-  <script type="text/javascript" src='__JS__/vue-resource.min.js'></script>
+  <link href="/summer/todaystore/public/Home/css/tdcss.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="/summer/todaystore/public/Home/js/jquery-3.2.1.min.js"></script>  
+  <script type="text/javascript" src="/summer/todaystore/public/Home/js/tdjs.js"></script>
+   <script type="text/javascript" src="/summer/todaystore/public/Home/js/vue.min.js"></script>
+  <script type="text/javascript" src='/summer/todaystore/public/Home/js/vue-resource.min.js'></script>
 </head>
 <body>
     <div id="app_index">
@@ -15,7 +16,7 @@
     <nav class="td_nav">
       <div class="td_navleft">
         <a href="tdindex.html">
-          <img src="__IMAGE__/tdlogo.png" />
+          <img src="/summer/todaystore/public/Home/images/tdlogo.png" />
         </a>
       </div>
       <div class="td_navmiddle">
@@ -29,7 +30,7 @@
       <div class="td_navright">
          <div class="floatright">
         <div class="floatright">
-         <a id="car" class="td_navright_a " v-on:click="poplogin(2)">购物车</a>
+       
          </div>
           <my-component-name></my-component-name>
       
@@ -42,12 +43,12 @@
     <div class="center_nav">
       <ul>
         <li class="center_nav_active" id="this_person">个 人 资 料</li>
-        <li id="this_car" ><a v-on:click="judge_car" href="?tab=2">购 物 车</a></li>
-        <li id="this_doing_table">未 完 成 订 单</li>
-        <li id="this_finished_table">已 完 成 订 单</li>
-        <li id="this_tables">所 有 订 单</li>
+        <li id="this_car" ><a v-on:click="judge_car(2)">购 物 车</a></li>
+        <li id="this_doing_table" v-on:click="judge_car(3)">未 完 成 订 单</li>
+        <li id="this_finished_table" v-on:click="judge_car(4)">已 完 成 订 单</li>
+        <li id="this_tables" v-on:click="judge_car(5)">所 有 订 单</li>
         <li id="this_fankui">反 馈 渠 道</li>
-        <li id="this_fankui"><a href="{:U('Back/back_index')}">后 台 系 统</a></li>
+        <li id="this_fankui" v-if="cookie==18302198262"><a href="/summer/todaystore/index.php/Home/Back/back_index.html">后 台 系 统</a></li>
       </ul>
     </div>
     <div class="center_information">
@@ -146,8 +147,8 @@
           <thead class="thead">
             <tr class="head-tit">
               <td class="choose-all checkbox-car">
-                <input id="exampleCheckbox" type="checkbox" class="selectAll goods-check AllCheck">
-                <label for="exampleCheckbox">全选</label>                    </td>
+                
+                <label for="">选择</label>                    </td>
                 <td class="name">商品名称</td>
                 <td class="single">单价(元)</td>
                 <td class="num">数量</td>
@@ -163,7 +164,7 @@
                   <label :for="'fruit'+key"></label>    
                       </td>
                   <td class="eve_img" >
-                    <img :src="'__IMAGE__/'+value.fruitname+'.jpg'" title="显示85号苹果5斤的详细信息" class="center_car_img">
+                    <img :src="'/summer/todaystore/public/Home/images/'+value.fruitname+'.jpg'" title="显示85号苹果5斤的详细信息" class="center_car_img">
                     <div class="detial">
                       <span class="things"><a href="/59" title="查看详情">{{value.fruitname}}</a></span>
                     </div>
@@ -172,9 +173,9 @@
                     <span class="product-unit-price" :id="'findprice1'+key">{{value.fruitprice}}</span>
                   </td>
                   <td class="">
-                    <input class="cut" value="-" type="button" v-on:click="forsum(--value.fruitnum,1,key)">
-                    <input class="amount" type="text"  :value="value.fruitnum">
-                    <input class="add" value="+" v-on:click="forsum(++value.fruitnum,2,key)" type="button">
+                    
+                    <span>{{value.fruitnum}}</span>
+                    
                     <span class="measure-unit"></span>
                   </td>
                   <td class="lcount">
@@ -187,14 +188,13 @@
               </tbody>
               <tfoot class="tfoot" v-if="carlist!=''">
                 <tr class="head-tit">
-                  <td class="choose-all checkbox-car">
-                    <input id="exampleCheckbox" type="checkbox" class="selectAll goods-check AllCheck">
-                    <label for="exampleCheckbox">全选</label>                            </td>
+                
                     <td class="all_car">
                       <div class="totle">
                         <span>小 计:</span> <span class="cmoney" >{{sum_price}}</span>
                         <br>
                         <select class="pickadd" v-model="pickwhich">
+                          <option disabled>请选择，如空，请先添加地址</option>
                           <option v-for="(value,key) in addresslist" :value="key">{{value.friendplace}}</option>
                         </select>
                       </div>
@@ -223,12 +223,12 @@
                  </tr>
                </thead>
                <tbody class="table_tbody">
-                <tr class="table_tr">
-                  <td>12123197398</td>
-                  <td>2018-3-27</td>
-                  <td>￥336</td>
-                  <td>已发货</td>
-                  <td><a>退货</a></td>
+                <tr class="table_tr" v-for="(value,key) in unfinishlist">
+                  <td>{{value.listid}}</td>
+                  <td>{{value.listtime}}</td>
+                  <td>{{value.listprice}}</td>
+                  <td>未发货</td>
+                  <td><a class="tuiCss" v-on:click="goTui(value.listid)">退货</a></td>
                 </tr>
               </tbody>
             </table>
@@ -245,13 +245,13 @@
              </tr>
            </thead>
            <tbody class="table_tbody">
-            <tr class="table_tr">
-              <td>12123197398</td>
-              <td>2018-3-27</td>
-              <td>￥336</td>
-              <td>已发货</td>
-              <td><a>退货</a></td>
-            </tr>
+            <tr class="table_tr" v-for="(value,key) in finishlist">
+                  <td>{{value.listid}}</td>
+                  <td>{{value.listtime}}</td>
+                  <td>{{value.listprice}}</td>
+                  <td>已发货</td>
+                  <td><a class="tuiCss" v-on:click="goTui(value.listid)">退货</a></td>
+                </tr>
           </tbody>
         </table>
       </div>
@@ -264,17 +264,19 @@
            <td>下单时间</td>
            <td>订单总金额</td>
            <td>订单状态</td>
-           <td>操作</td>
+           <td>订单地址</td>
          </tr>
        </thead>
        <tbody class="table_tbody">
-        <tr class="table_tr">
-          <td>12123197398</td>
-          <td>2018-3-27</td>
-          <td>￥336</td>
-          <td>已发货</td>
-          <td><a>退货</a></td>
-        </tr>
+        <tr class="table_tr" v-for="(value,key) in allbuylist">
+                  <td>{{value.listid}}</td>
+                  <td>{{value.listtime}}</td>
+                  <td>{{value.listprice}}</td>
+                  <td><span v-if="value.liststatus==0">未完成</span>
+                  <span v-if="value.liststatus==1">已完成</span>
+                <span v-if="value.liststatus==2">退货中</span></td>
+                  <td>{{value.friendphone}}{{value.listaddress}}</td>
+                </tr>
       </tbody>
     </table>
   </div>
@@ -282,7 +284,7 @@
     <span class="fankui_title">我们一直想要变得更好，更加让您满意。当您先我们反馈后，我们会通知相关人员，给您一个合理的解决方案，并打电话给您。</span>
     <textarea class="fankui_content"></textarea> 
     <br>
-    <input type="button" class="submit_fankui" value="提交，感谢您的反馈！" name="">
+    <input type="button" class="submit_fankui" value="提交，感谢您的反馈！" v-on:click="subfankui()" name="">
   </div>
 </section>
 <div class="clear"></div>
@@ -297,7 +299,7 @@
 </footer>
 <div class="fruit_model_bg hidden" style="">
   <a class="close_model_a" v-on:click="start_model(0,this.pay)">
-    <img src="__IMAGE__/close_model.png" >
+    <img src="/summer/todaystore/public/Home/images/close_model.png" >
   </a>
 <div class="model_content">
     <div >
@@ -306,12 +308,12 @@
           <td class="alipay activepay">
             <span class="paddingL70" v-if="paytab%2==1" v-on:click="changepay(paytab++)">使用支付宝支付</span>
             <span class="direction" v-if="paytab%2==1" v-on:click="changepay(paytab++)"><<</span>
-            <img class="width200" v-if="pay!=0&&paytab%2==0" v-bind:src="'__IMAGE__/alipay'+pay+'.jpg'"/>
+            <img class="width200" v-if="pay!=0&&paytab%2==0" v-bind:src="'/summer/todaystore/public/Home/images/alipay'+pay+'.jpg'"/>
           </td>
           <td class="wepay">
             <span class="paddingL70" v-if="paytab%2==0"  v-on:click="changepay(paytab++)">使用微信支付</span>
             <span class="direction" v-if="paytab%2==0" v-on:click="changepay(paytab++)">>></span>
-            <img class="width200" v-if="pay!=0&&paytab%2==1" v-bind:src="'__IMAGE__/wepay'+pay+'.png'"/></td>
+            <img class="width200" v-if="pay!=0&&paytab%2==1" v-bind:src="'/summer/todaystore/public/Home/images/wepay'+pay+'.png'"/></td>
         </tr>
       </table>
     </div>
@@ -319,6 +321,6 @@
 </div>
 
 </div>
-   <script type="text/javascript" src="__JS__/index_center.js"></script>
+   <script type="text/javascript" src="/summer/todaystore/public/Home/js/index_center.js"></script>
 </body>
 </html>

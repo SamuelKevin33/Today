@@ -158,14 +158,6 @@ a{
 }
 .pie {
 	position:absolute;
-/*	width:100px;
-	height:200px;
-	-moz-border-radius:100px 0 0 100px;
-	-webkit-border-radius:100px 0 0 100px; 
-	border-radius:100px 0 0 100px;
-	-moz-transform-origin:right center;
-	-webkit-transform-origin:right center;
-	transform-origin:right center; */
 	width:160px;
 	height:160px;
 	clip:rect(0px,80px,160px,0px);
@@ -185,10 +177,10 @@ a{
 
 
 #browse-IE {
-	-moz-transform:rotate(116.28deg);
-	-webkit-transform:rotate(116.28deg);
-	-o-transform:rotate(116.28deg);
-	transform:rotate(116.28deg);
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
 }
 #browse-IE .pie {
 	background-color:#4476ff;
